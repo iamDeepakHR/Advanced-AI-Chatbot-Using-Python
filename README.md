@@ -65,7 +65,7 @@ pip install -r requirements.txt
 ```  
 
 ### **4️⃣ Configure API Key**  
-1. **Set your API key** inside `app.py`:  
+1. **Set your API key** inside `Chatbot.py`:  
    ```python
    api_key = "YOUR_API_KEY"
    ```  
