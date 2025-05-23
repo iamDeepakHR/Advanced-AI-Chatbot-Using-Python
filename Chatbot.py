@@ -7,7 +7,7 @@ import google.generativeai as genai
 load_dotenv()
 
 # Configure Gemini API
-api_key = "YOUR_API_KEY"
+api_key = "AIzaSyDnrUrJc7XrsBaxvFmtQxLbRrdA04qUjiw" # Load API key from the .env file
 if not api_key:
     st.error("API key not found. Please set the GENAI_API_KEY environment variable.")
     st.stop()
@@ -49,6 +49,30 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+# Footer CSS + container padding
+st.markdown("""
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #f0f2f6;
+            color: #000;
+            text-align: center;
+            padding: 12px 10px;
+            font-size: 14px;
+            z-index: 9999;
+        }
+        /* Push page content up above footer */
+        .block-container {
+            padding-bottom: 70px !important;
+        }
+    </style>
+    <div class="footer">
+        Advanced Chatbot by <b>Deepak Gowda H R</b>, Mandya Technologies Ltd, Mandya, Karnataka, India • Copyright © 2025
+    </div>
+""", unsafe_allow_html=True)
 
 # Initialize session state for chat history
 if "chat_history" not in st.session_state:
@@ -61,7 +85,6 @@ for message in st.session_state["chat_history"]:
 
 # User Input
 user_question = st.chat_input("Type your question here...")
-
 if user_question:
     # Add user message to chat history
     st.session_state["chat_history"].append({"role": "user", "content": user_question})
