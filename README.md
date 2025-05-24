@@ -3,6 +3,9 @@
 This project leverages **Google's Gemini API** to create an **AI-powered chatbot** within a **Streamlit** web application. Users can interact with the chatbot in real-time and receive AI-generated responses based on their queries.  
 
 ---  
+🌐 **Live Demo**: [Click here to try the chatbot](https://advanced-ai-chatbot.onrender.com/)
+
+---
 
 ## **Table of Contents**  
 1. [Project Overview](#project-overview)  
